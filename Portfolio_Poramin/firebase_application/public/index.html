@@ -152,7 +152,8 @@ https://templatemo.com/tm-566-medic-care
                     <div class="col-lg-6 col-md-6 col-12">
                         <h2 class="mb-lg-3 mb-3">Mr.Poramin Munjoung</h2>
 
-                        <p>Backend Developer with up to 6 years experience in various porjects, such as applications, websites, And government. I am very agile and tenacious at work. I like to learn new technology and am ready to develop myself regularly.
+                        <p>Backend Developer with up to <span class="YearString">0</span> years experience in various porjects, such as applications, websites, And government. I am very agile and tenacious at work. I like to learn new technology and am ready
+                            to develop myself regularly.
                         </p><br>
                         <b class="animated-item">EDUCATION</b><br>
                         <b>Rajamangala University of Technology Phra Nakhon </b>
@@ -161,7 +162,7 @@ https://templatemo.com/tm-566-medic-care
 
                     <div class="col-lg-4 col-md-5 col-12 mx-auto">
                         <div class="featured-circle bg-white shadow-lg d-flex justify-content-center align-items-center">
-                            <p class="featured-text"><span class="featured-number">6</span> Years<br> of Experiences</p>
+                            <p class="featured-text"><span class="YearString featured-number">0</span> Years<br> of Experiences</p>
                         </div>
                     </div>
 
@@ -541,6 +542,24 @@ https://templatemo.com/tm-566-medic-care
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/scrollspy.min.js"></script>
     <script src="js/custom.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            console.log("document loaded");
+            const now = Date.now();
+            const targetDate = new Date("2017-08-08"); //2017-08-08 Is First date 
+            const targetYear = targetDate.getFullYear();
+            const nowYear = new Date().getFullYear();
+            const years = nowYear - targetYear;
+            $(".YearString").each(function() {
+                const dateInput = document.querySelector(".YearString");
+                $(this).text(years);
+            });
+
+
+        });
+    </script>
+
     <!--
 
 TemplateMo 566 Medic Care
