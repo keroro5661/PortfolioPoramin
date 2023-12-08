@@ -36,7 +36,11 @@ https://templatemo.com/tm-566-medic-care
 </head>
 
 <body id="top">
-
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="" /></div>
+    </div>
+    <!-- end loader -->
     <main>
 
         <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
@@ -545,7 +549,10 @@ https://templatemo.com/tm-566-medic-care
 
     <script>
         $(document).ready(function() {
-            console.log("document loaded");
+            setTimeout(function() {
+                $('.loader_bg').fadeToggle();
+            }, 1500);
+
             const now = Date.now();
             const targetDate = new Date("2017-08-08"); //2017-08-08 Is First date 
             const targetYear = targetDate.getFullYear();
