@@ -12,6 +12,7 @@ $ firebase login
 $ firebase init
 --------------------------
 3. How to Deploy ----------
+เปิด Terminal หรือ Git Bash
 $ firebase deploy --only hosting
 
 
